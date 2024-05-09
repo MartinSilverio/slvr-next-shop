@@ -62,4 +62,5 @@ export const ProductSchema = z.object({
     sold: z.number(),
 });
 
+export type TImage = z.infer<typeof ImageSchema>;
 export type TProduct = z.infer<typeof ProductSchema>;

@@ -64,3 +64,4 @@ export const ProductSchema = z.object({
 
 export type TImage = z.infer<typeof ImageSchema>;
 export type TProduct = z.infer<typeof ProductSchema>;
+export type TInventory = z.infer<typeof InventorySchema>;

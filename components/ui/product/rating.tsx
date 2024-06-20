@@ -27,11 +27,16 @@ function Rating({ rating, reviews }: { rating: number; reviews: number }) {
         );
     }
 
+    //Todo: Change span to Link once review section is implemented
     return (
         <section className="col-span-full flex flex-row pl-4">
             <span className="pr-2">{rating}</span>
             {starImages}
-            <span className="pl-2">See all {reviews} reviews</span>
+            <span className="pl-2">
+                {ratingRounded === 0
+                    ? `No reviews yet. Be the first`
+                    : `See all ${reviews} reviews`}
+            </span>
         </section>
     );
 }

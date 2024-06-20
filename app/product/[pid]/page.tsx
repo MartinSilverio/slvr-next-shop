@@ -1,3 +1,4 @@
+import ColorSwatch from '@/components/ui/product/colorSwatch';
 import Gallery from '@/components/ui/product/gallery';
 import Price from '@/components/ui/product/price';
 import Rating from '@/components/ui/product/rating';
@@ -29,6 +30,13 @@ async function Page({
             </h1>
             <Price inventoryItem={productData.inventory[0]} />
             <Rating rating={productData.rating} reviews={productData.reviews} />
+            <ColorSwatch
+                selectedColor={currColor}
+                colors={productData.colors.map((color) => ({
+                    color,
+                    stock: 23,
+                }))}
+            />
         </>
     );
 }

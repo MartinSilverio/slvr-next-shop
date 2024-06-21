@@ -28,7 +28,9 @@ function ColorSwatch({
 }) {
     return (
         <section className="col-span-full pl-4">
-            <p>Please select a color</p>
+            <p className="text-neutral-500 drop-shadow-text">
+                Available Colors
+            </p>
             <RadioGroup
                 defaultValue={selectedColor}
                 className="mt-2 flex flex-row"

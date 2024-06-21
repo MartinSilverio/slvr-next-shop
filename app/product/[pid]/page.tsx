@@ -2,6 +2,7 @@ import ColorSwatch from '@/components/ui/product/colorSwatch';
 import Gallery from '@/components/ui/product/gallery';
 import Price from '@/components/ui/product/price';
 import Rating from '@/components/ui/product/rating';
+import SizeSelection from '@/components/ui/product/sizeSelection';
 import { fetchProduct } from '@/lib/actions';
 
 async function Page({
@@ -34,6 +35,12 @@ async function Page({
                 selectedColor={currColor}
                 colors={productData.colors.map((color) => ({
                     color,
+                    stock: 23,
+                }))}
+            />
+            <SizeSelection
+                sizesData={productData.sizes.map((size) => ({
+                    size,
                     stock: 23,
                 }))}
             />

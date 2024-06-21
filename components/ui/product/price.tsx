@@ -7,7 +7,7 @@ function Price({ inventoryItem }: { inventoryItem: TInventory }) {
         <section className="col-span-full flex-col space-y-2 pl-4 font-medium drop-shadow-text">
             <div>
                 <span className="mr-2 text-3xl text-neutral-600">{`$${inventoryItem.sale_price}`}</span>
-                <span className="text text-xl text-neutral-400 line-through">{`$${inventoryItem.list_price}`}</span>
+                <span className="text-xl text-neutral-400 line-through">{`$${inventoryItem.list_price}`}</span>
             </div>
             {inventoryItem.discount ||
                 (inventoryItem.discount_percentage && (
